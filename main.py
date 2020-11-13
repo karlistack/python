@@ -81,7 +81,7 @@ class Elipse(Forma):
 
     def calcularArea(self):
      area = m.pi*(self.radiomayor*self.radiomenor)
-     print(area)
+     print("el area es",area)
     pass
 
 
@@ -91,7 +91,8 @@ class Cuadrado(Rectangulo):
 
     def calcularArea(self):
         area = (self.lado)**2
-        print(area)
+        print("el area es",area)
+        self.area = area
     pass
 
     def calculadrPerimetro(self):
@@ -114,5 +115,8 @@ if __name__ == '__main__':
     e1.calcularArea()
     c1 = Circulo(5)
     c1.calcularArea()
-    cuadra = Cuadrado(23)
+    cuadra = Cuadrado(2)
     cuadra.calcularArea()
+    r1 = Rectangulo(2,2)
+    r1.area=4
+    r1.cambiarTamaño()
