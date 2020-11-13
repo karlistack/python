@@ -79,10 +79,44 @@ class Secretario(Empleado):
         pass
 
 class Vendedor(Empleado):
+    
+    def __init__(self, nombre, apellido, dni, direccion, antiguedad, telefono, salario, supervisor,coche,matricula,marca,modelo,telefonomovil,areadeventa,listaclientes,porcetanje):
+        super().__init__(nombre, apellido, dni, direccion, antiguedad, telefono, salario, supervisor)
+        self.coche = coche
+        self.matricula=matricula
+        self.marca = marca
+        self.modelo = modelo
+        self.telefonomovil=telefonomovil
+        self.areadeventa = areadeventa
+        self.listadeclientes = listaclientes
+        self.porcentaje = porcetanje
+
+    def imprimir(self):
+        print(self.nombre,
+              self.apellido,
+              self.direccion,
+              self.dni,
+              self.antiguedad,
+              self.telefono,
+              self.salario,
+              self.supervisor,
+              self.coche,
+              self.matricula,
+              self.marca,
+              self.modelo,
+              self.telefonomovil,
+              self.areadeventa,
+              self.listadeclientes,
+              self.porcentaje)
+
+
     pass
 
 
 class Jefe_de_ventas(Empleado):
+
+    
+
     pass
 
 
@@ -97,6 +131,10 @@ if __name__ == "__main__":
                   'calle peña', 2, 9543212, 1000, 'Laura')
     j1 = Jefe_de_ventas('carla', 'dale', 7343432,
                         'calle pietro', 10, 343243432, 1200, 'juan')
+
+
+
+
 
     v1.imprimir()
     s1.imprimir()

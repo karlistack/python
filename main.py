@@ -5,7 +5,8 @@
 
 
 import math as m
-
+import random
+from random import randrange
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+8 to toggle the breakpoint.
@@ -16,6 +17,12 @@ class Punto(object):
     def __init__(self, x=0, y=0):
         self.x = x
         self.y = y
+    
+    def __str__(self):
+        return 'from new__str__:'+object.__str__(self)
+
+
+
 
 
 class Forma(Punto):
@@ -111,6 +118,15 @@ class Circulo(Elipse):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('estas en el main')
+
+    lista_obj = []
+    num = input("cuantos objetos quieres motrar")
+    for n in range(int(num)):
+        numeroale = randrange(10)
+        obj = Cuadrado(numeroale)
+        lista_obj.append(obj)
+    print(str(lista_obj))
+
     e1 = Elipse(1,2)
     e1.calcularArea()
     c1 = Circulo(5)
