@@ -174,6 +174,5 @@ if __name__ == "__main__":
 
     v1.imprimir()
     s1.imprimir()
-    s1.rellenadatos()
     s1.imprimirEmpleados()
     s1.imprimir()
